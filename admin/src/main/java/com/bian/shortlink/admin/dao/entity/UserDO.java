@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("t_user")
-public class UserDo {
+public class UserDO {
 
     /**
      * id
