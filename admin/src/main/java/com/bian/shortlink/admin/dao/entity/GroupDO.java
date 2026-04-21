@@ -3,18 +3,22 @@ package com.bian.shortlink.admin.dao.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 /**
  * 短链接分组实体
  */
-@Data
 @TableName("t_group")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class GroupDO {
-    private static final long serialVersionUID = 1L;
-
     @TableId(type = IdType.AUTO)
     /**
      * ID
@@ -55,6 +59,4 @@ public class GroupDO {
      * 删除标识 0：未删除 1：已删除
      */
     private Integer delFlag;
-
-    public GroupDO() {}
 }
