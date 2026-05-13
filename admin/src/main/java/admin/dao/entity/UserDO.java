@@ -1,8 +1,7 @@
 package admin.dao.entity;
 
-
-import admin.common.database.BaseDO;
 import com.baomidou.mybatisplus.annotation.TableName;
+import admin.common.database.BaseDO;
 import lombok.Data;
 
 /**

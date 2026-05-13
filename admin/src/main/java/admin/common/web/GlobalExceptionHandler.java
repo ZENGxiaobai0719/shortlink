@@ -1,13 +1,12 @@
 package admin.common.web;
 
-
+import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.util.ReflectUtil;
+import cn.hutool.core.util.StrUtil;
 import admin.common.convention.errorcode.BaseErrorCode;
 import admin.common.convention.exception.AbstractException;
 import admin.common.convention.result.Result;
 import admin.common.convention.result.Results;
-import cn.hutool.core.collection.CollectionUtil;
-import cn.hutool.core.util.ReflectUtil;
-import cn.hutool.core.util.StrUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -62,7 +61,7 @@ public class GlobalExceptionHandler {
      * 拦截未捕获异常
      */
     @ExceptionHandler(value = Throwable.class)
-    public Result<Void> defaultErrorHandler(HttpServletRequest request, Throwable throwable) {
+    public Result defaultErrorHandler(HttpServletRequest request, Throwable throwable) {
         log.error("[{}] {} ", request.getMethod(), getUrl(request), throwable);
         // 注意，此处是为了聚合模式添加的代码，正常不需要该判断
         if (Objects.equals(throwable.getClass().getSuperclass().getSimpleName(), AbstractException.class.getSimpleName())) {

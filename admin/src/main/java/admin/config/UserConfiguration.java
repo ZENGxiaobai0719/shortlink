@@ -1,6 +1,5 @@
 package admin.config;
 
-
 import admin.common.biz.user.UserFlowRiskControlFilter;
 import admin.common.biz.user.UserTransmitFilter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

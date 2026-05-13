@@ -1,6 +1,5 @@
 package admin.common.convention.result;
 
-
 import admin.common.convention.errorcode.BaseErrorCode;
 import admin.common.convention.exception.AbstractException;
 

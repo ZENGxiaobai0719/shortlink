@@ -1,6 +1,6 @@
 package admin.controller;
 
-
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import admin.common.convention.result.Result;
 import admin.common.convention.result.Results;
 import admin.dto.req.RecycleBinRecoverReqDTO;
@@ -10,7 +10,6 @@ import admin.remote.ShortLinkActualRemoteService;
 import admin.remote.dto.req.ShortLinkRecycleBinPageReqDTO;
 import admin.remote.dto.resp.ShortLinkPageRespDTO;
 import admin.service.RecycleBinService;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

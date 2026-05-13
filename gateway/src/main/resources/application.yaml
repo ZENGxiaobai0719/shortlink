@@ -1,2 +1,18 @@
 server:
-  port: 8001
+  port: 8000
+spring:
+  application:
+    name: short-link-gateway
+  profiles:
+    # 本地拆模块（admin + gateway + project）用 dev，路由 lb://short-link-admin / short-link-project
+    active: dev
+    # 仅启动聚合服务时用 aggregation，路由 lb://short-link-aggregation
+    # active: aggregation
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

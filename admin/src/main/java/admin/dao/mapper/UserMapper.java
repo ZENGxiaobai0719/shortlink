@@ -1,8 +1,7 @@
 package admin.dao.mapper;
 
-
-import admin.dao.entity.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import admin.dao.entity.UserDO;
 
 /**
  * 用户持久层

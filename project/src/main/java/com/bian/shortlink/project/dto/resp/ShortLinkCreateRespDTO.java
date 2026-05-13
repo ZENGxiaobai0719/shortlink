@@ -5,18 +5,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
+/**
+ * 短链接创建响应对象
+ */
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class ShortLinkCreateRespDTO {
-    /*
-    分组信息
+
+    /**
+     * 分组信息
      */
     private String gid;
-
 
     /**
      * 原始链接
@@ -27,5 +28,4 @@ public class ShortLinkCreateRespDTO {
      * 短链接
      */
     private String fullShortUrl;
-
 }

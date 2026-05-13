@@ -1,6 +1,5 @@
 package admin.controller;
 
-
 import admin.common.convention.result.Result;
 import admin.remote.ShortLinkActualRemoteService;
 import lombok.RequiredArgsConstructor;

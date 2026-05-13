@@ -1,17 +1,15 @@
 package admin.service;
 
-
+import com.baomidou.mybatisplus.extension.service.IService;
 import admin.dao.entity.GroupDO;
 import admin.dto.req.ShortLinkGroupSortReqDTO;
 import admin.dto.req.ShortLinkGroupUpdateReqDTO;
 import admin.dto.resp.ShortLinkGroupRespDTO;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 
 /**
  * 短链接分组接口层
-
  */
 public interface GroupService extends IService<GroupDO> {
 

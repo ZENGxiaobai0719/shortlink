@@ -1,8 +1,7 @@
 package admin.dto.resp;
 
-
-import admin.common.serialize.PhoneDesensitizationSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import admin.common.serialize.PhoneDesensitizationSerializer;
 import lombok.Data;
 
 /**

@@ -1,6 +1,5 @@
 package admin.common.convention.exception;
 
-
 import admin.common.convention.errorcode.BaseErrorCode;
 import admin.common.convention.errorcode.IErrorCode;
 

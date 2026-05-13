@@ -1,6 +1,5 @@
 package com.bian.shortlink.project.common.convention.result;
 
-
 import com.bian.shortlink.project.common.convention.errorcode.BaseErrorCode;
 import com.bian.shortlink.project.common.convention.exception.AbstractException;
 

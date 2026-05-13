@@ -1,6 +1,5 @@
 package admin.common.enums;
 
-
 import admin.common.convention.errorcode.IErrorCode;
 
 /**

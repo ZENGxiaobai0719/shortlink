@@ -1,6 +1,5 @@
 package admin.config;
 
-
 import admin.common.biz.user.UserContext;
 import feign.RequestInterceptor;
 import org.springframework.context.annotation.Bean;

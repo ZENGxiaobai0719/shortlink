@@ -1,6 +1,13 @@
 package admin.service.impl;
 
-
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.lang.UUID;
+import com.alibaba.fastjson2.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import admin.common.biz.user.UserContext;
 import admin.common.convention.exception.ClientException;
 import admin.common.convention.exception.ServiceException;
@@ -14,13 +21,6 @@ import admin.dto.resp.UserLoginRespDTO;
 import admin.dto.resp.UserRespDTO;
 import admin.service.GroupService;
 import admin.service.UserService;
-import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.collection.CollUtil;
-import com.alibaba.fastjson2.JSON;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
@@ -33,12 +33,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 import java.util.Objects;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import static admin.common.constant.RedisCacheConstant.LOCK_USER_REGISTER_KEY;
 import static admin.common.constant.RedisCacheConstant.USER_LOGIN_KEY;
-import static admin.common.enums.UserErrorCodeEnum.*;
+import static admin.common.enums.UserErrorCodeEnum.USER_EXIST;
+import static admin.common.enums.UserErrorCodeEnum.USER_NAME_EXIST;
+import static admin.common.enums.UserErrorCodeEnum.USER_SAVE_ERROR;
 
 /**
  * 用户接口实现层

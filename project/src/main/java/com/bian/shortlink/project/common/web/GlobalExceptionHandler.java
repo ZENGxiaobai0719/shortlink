@@ -2,7 +2,6 @@ package com.bian.shortlink.project.common.web;
 
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.StrUtil;
-
 import com.bian.shortlink.project.common.convention.errorcode.BaseErrorCode;
 import com.bian.shortlink.project.common.convention.exception.AbstractException;
 import com.bian.shortlink.project.common.convention.result.Result;
